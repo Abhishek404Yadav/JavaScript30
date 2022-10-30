@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>JS Drum Kit</title>
   <link rel="stylesheet" href="style.css">
+  <script src="drum.js"defer></script>
 </head>
 <body>
 
@@ -56,19 +57,6 @@
   <audio data-code="KeyJ" src="sounds/snare.wav"></audio>
   <audio data-code="KeyK" src="sounds/tom.wav"></audio>
   <audio data-code="KeyL" src="sounds/tink.wav"></audio>
-
-<script>
-window.addEventListener('keydown', e=>{
-  //i have used code instead of keyCode in audio selection
-  const aud =document.querySelector(`[data-code=${e.code}]`);//`[data-key="KeyD"]`
-  const keys=document.querySelector(`[data-key="${e.keyCode}"]`);
-  if(!aud) return;//in this case query selector does't select anything so function returns undefined
-  key.classList.add("playing");// we put if condition first because we don't wannna catch a error of undfined key
-  aud.currentTime=0;// this reset the time to 0
-  aud.play();
-} )
-</script>
-
 
 </body>
 </html>
